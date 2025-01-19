@@ -1,0 +1,169 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: url("./background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 400px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+/* Inputs ----------------------------------------------------------- */
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;
+  padding: 10px;
+  color: green;
+  font-size: 20px;
+  border: 2px solid green;
+  border-radius: 4px;
+}
+
+.add-button {
+  margin-left: 10px;
+  background-color: green;
+  font-size: 25px;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-button:hover {
+  background-color: #40b85a;
+}
+
+.search-container {
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+}
+.search-bar {
+}
+/* Filters----------------------------------------------------------------- */
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filter,
+.delete-all {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter:hover,
+.delete-all:hover {
+  background-color: #0056b3;
+}
+
+/* Todos Section */
+.todos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.todo span {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.todo input[type="checkbox"] {
+  cursor: pointer;
+}
+
+.todo .delete-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.todo .delete-btn:hover {
+  color: #c82333;
+}
+
+.empty-image {
+  display: none;
+  height: auto;
+  width: 100%;
+}
+
+/* Scrollbar for Todos */
+.todos-container {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.todos-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.todos-container::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .todo-input {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .add-button,
+  .filter,
+  .delete-all {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .todo {
+    padding: 8px;
+    font-size: 14px;
+  }
+}
